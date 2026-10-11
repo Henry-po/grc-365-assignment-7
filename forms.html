@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Contact Me</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Coiny&family=Yuyu&display=swap" rel="stylesheet">
+
+<style>
+	body {
+		background: rgba(243,240,241,1.00);
+	}
+
+	h1 {
+		font: 48px/0.9em 'Coiny';
+		text-align: center;
+		color: rgba(31,21,21,1.00);
+		text-decoration: underline;
+		margin-top: 48px;
+	}
+
+	form {
+		width: 600px;
+		max-width: 85%;
+		margin: 40px auto;
+		padding: 40px;
+		background: white;
+		border: 1px solid rgba(194,186,189,1.00);
+		border-radius: 40px;
+		box-sizing: border-box;
+	}
+
+	label, legend {
+		font: 18pt/1.4em 'Yuyu';
+		color: rgba(66,41,42,1.00);
+	}
+
+	input[type="text"],
+	input[type="email"],
+	select,
+	textarea {
+		width: 100%;
+		padding: 12px;
+		margin: 8px 0 24px;
+		border: 1px solid rgba(194,186,189,1.00);
+		border-radius: 8px;
+		background: rgba(253,250,251,1.00);
+		box-sizing: border-box;
+		font: 14pt Georgia;
+	}
+
+	fieldset {
+		border: 1px solid rgba(194,186,189,1.00);
+		border-radius: 12px;
+		margin-bottom: 24px;
+		padding: 16px;
+	}
+
+	.choice {
+		margin: 10px 0;
+	}
+
+	input[type="radio"],
+	input[type="checkbox"] {
+		accent-color: rgba(62,42,42,1.00);
+	}
+
+	textarea {
+		height: 140px;
+		resize: vertical;
+	}
+
+	input[type="submit"] {
+		display: block;
+		margin: 20px auto 0;
+		padding: 12px 40px;
+		background: rgba(62,42,42,1.00);
+		color: white;
+		border: none;
+		border-radius: 12px;
+		font: 20pt 'Yuyu';
+		cursor: pointer;
+	}
+
+	input[type="submit"]:hover {
+		background: rgba(120,75,85,1.00);
+	}
+</style>
+</head>
+
+<body>
+
+<h1>Contact Me</h1>
+
+<form onsubmit="event.preventDefault(); alert('This is a demonstration form.');">
+
+	<label for="name">Name:</label>
+	<input type="text" id="name" name="name"
+		placeholder="Enter your name" required>
+
+	<label for="email">Email Address:</label>
+	<input type="email" id="email" name="email"
+		placeholder="Enter your email" required>
+
+	<label for="subject">Subject:</label>
+	<select id="subject" name="subject">
+		<option value="">Select an option</option>
+		<option value="general">General Inquiry</option>
+		<option value="commission">Illustration Commission</option>
+		<option value="collaboration">Collaboration</option>
+		<option value="other">Other</option>
+	</select>
+
+	<fieldset>
+		<legend>Project Type</legend>
+
+		<div class="choice">
+			<input type="radio" id="illustration"
+				name="project" value="illustration">
+			<label for="illustration">Illustration</label>
+		</div>
+
+		<div class="choice">
+			<input type="radio" id="graphic"
+				name="project" value="graphic">
+			<label for="graphic">Graphic Design</label>
+		</div>
+
+		<div class="choice">
+			<input type="radio" id="uiux"
+				name="project" value="uiux">
+			<label for="uiux">UI/UX Design</label>
+		</div>
+	</fieldset>
+
+	<fieldset>
+		<legend>Services</legend>
+
+		<div class="choice">
+			<input type="checkbox" id="character"
+				name="services" value="character">
+			<label for="character">Character Illustration</label>
+		</div>
+
+		<div class="choice">
+			<input type="checkbox" id="branding"
+				name="services" value="branding">
+			<label for="branding">Visual Branding</label>
+		</div>
+
+		<div class="choice">
+			<input type="checkbox" id="website"
+				name="services" value="website">
+			<label for="website">Website Design</label>
+		</div>
+	</fieldset>
+
+	<label for="message">Comment:</label>
+	<textarea id="message" name="message"
+		placeholder="Write your message here..."
+		required></textarea>
+
+	<input type="submit" value="Send Message">
+
+</form>
+
+</body>
+</html>
